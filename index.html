@@ -1,73 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaidasi Borang</title>
-    <link rel="stylesheet" href="components/output.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vaidasi Borang</title>
+        <link rel="stylesheet" href="components/output.css">
 
-</head>
-<body class="bg-indigo-100 flex justify-center">
-    <form id="myform" class="flex flex-col items-center bg-green-200 bg-opacity-15 border shadow-lg rounded-lg justify-around h-max w-max mt-10 p-5">
-        <h1 class="font-bold text-2xl text-center">Form Validation</h1>
-                
-        <div id="isi" class="w-full p-5">
-            
-            <div class="mb-4">
-                <label for="password" class="font-semibold">Buat Password</label>
-                <input type="password" name="password" placeholder="Password" class="border rounded-lg p-2 w-full" />
-                <p id="invalid-password" class="font-light text-red-600">Panjang password minimal 8 karakter dan harus mengandung huruf kapital, angka, dan simbol</p>
-            </div>
-            
-            <div class="mb-4">
-                <label for="email" class="font-semibold">Email</label>
-                <input type="email" name="email" placeholder="Email" class="border rounded-lg p-2 w-full" />
-                <p id="invalid-email" class="font-light text-red-600">Email harus disertai @gmail atau sejenisnya dengan .com atau .id</p>
-            </div>
-            
-            <div class="mb-4">
-                <label for="nim" class="font-semibold">NIM</label>
-                <input type="text" name="nim" />
-                <p id="invalid-nim" class="font-light text-red-600">Panjang nim 9 karakter dan harus angka</p>
-            </div>
+    </head>
+    <body>
+        <div class="flex items-center justify-center content-center h-screen w-screen">
+            <form
+            id="myform"
+            class="flex flex-col items-center h-[90%] w-[90%] border p-5 shadow-md">
+            <div class="flex flex-col items-center h-5/6 w-[90%]">
+                <h1 class="font-bold text-2xl text-center border-b p-2 w-full">Form Validation</h1>
+            <div id="isi" class="w-full grid grid-cols-2 gap-10 mt-20">
+                <div class="p-5 shadow-md">
+                    <div class="mb-4 flex flex-col">
+                        <label for="password" class="font-medium">Buat Password</label>
+                        <input
+                            type="password"
+                            name="password"
+                            class="border rounded-lg p-2 w-1/2 h-8"/>
+                        <p id="invalid-password" class="text-xs mt-1 font-light text-red-600">Panjang password
+                            minimal 8 karakter dan harus mengandung huruf kapital, angka, dan simbol</p>
+                    </div>
 
-            <div class="mb-4">
-                <label for="com" class="font-semibold">COM</label>
-                <input type="text" name="com" />
-                <p id="invalid-com" class="font-light text-red-600">com hanya A,B,dan C UperCase</p>
-            </div>
-            
-            <div class="mb-4">
-                <label for="nama" class="font-semibold">Nama</label>
-                <input type="text" name="nama"/>
-                <p id="invalid-nama" class="font-light text-red-600">Nama terdiri dari huruf dengan huruf kapital pada awal kata</p>
-               
-            </div>
+                    <div class="mb-4 flex flex-col">
+                        <label for="email" class="font-medium">Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            class="border rounded-lg p-2 w-1/2 h-8"/>
+                        <p id="invalid-email" class="text-xs mt-1 font-light text-red-600">Email harus disertai @gmail atau sejenisnya dengan .com atau .id</p>
+                    </div>
 
-            <div class="mb-4">
-                <label for="tanggal" class="font-semibold">Tanggal lahir</label>
-                <input type="text" name="tanggal" />
-                <p id="invalid-tanggal" class="font-light text-red-600">Contoh : 31-04-2024 </p>
-                   
-            </div>
+                    <div class="mb-4 flex flex-col">
+                        <label for="nim" class="font-medium">NIM</label>
+                        <input type="text" name="nim" class="border rounded-lg p-2 w-1/2 h-8"/>
+                        <p id="invalid-nim" class="text-xs mt-1 font-light text-red-600">Panjang nim 9 karakter dan harus angka</p>
+                    </div>
 
-            <div class="mb-4">
-                <label for="nomor" class="font-semibold">Nomor HP</label>
-                <input type="text" name="nomor" />
-                <p id="invalid-nomor" class="font-light text-red-600">Contoh 085262806830 ,hanya dimulai "08" dan hanya 12-13 digit</p>
-                 
-            </div>
+                    <div class="mb-4 flex flex-col">
+                        <label for="com" class="font-medium">COM</label>
+                        <input type="text" name="com" class="border rounded-lg p-2 w-1/2 h-8"/>
+                        <p id="invalid-com" class="text-xs mt-1 font-light text-red-600">com hanya A,B,dan C UperCase</p>
+                    </div>
+                </div>
+                <div class="shadow-md p-5">
+                    <div class="mb-4 flex flex-col">
+                        <label for="nama" class="font-medium">Nama</label>
+                        <input type="text" name="nama" class="border rounded-lg p-2 w-1/2 h-8"/>
+                        <p id="invalid-nama" class="text-xs mt-1 font-light text-red-600">Nama terdiri dari huruf dengan huruf kapital pada awal kata</p>
 
-            <div class="mb-4">
-                <label for="link" class="font-semibold">Validasi Link</label>
-                <input type="text" name="link" />
-                <p id="invalid-link" class="font-light text-red-600">Url dengan protokol valid,nama domain,dan extensi domain .Contoh http://www.example.com</p>
-                 
+                    </div>
+
+                    <div class="mb-4 flex flex-col">
+                        <label for="tanggal" class="font-medium">Tanggal lahir</label>
+                        <input type="text" name="tanggal" class="border rounded-lg p-2 w-1/2 h-8"/>
+                        <p id="invalid-tanggal" class="text-xs mt-1 font-light text-red-600">Contoh : 31-04-2024
+                        </p>
+
+                    </div>
+
+                    <div class="mb-4 flex flex-col">
+                        <label for="nomor" class="font-medium">Nomor HP</label>
+                        <input type="text" name="nomor" class="border rounded-lg p-2 w-1/2 h-8"/>
+                        <p id="invalid-nomor" class="text-xs mt-1 font-light text-red-600">Contoh 085262806830 ,hanya dimulai "08" dan hanya 12-13 digit</p>
+
+                    </div>
+
+                    <div class="mb-4 flex flex-col">
+                        <label for="link" class="font-medium">Validasi Link</label>
+                        <input type="text" name="link" class="border rounded-lg p-2 w-1/2 h-8"/>
+                        <p id="invalid-link" class="text-xs mt-1 font-light text-red-600">Url dengan protokol
+                            valid,nama domain,dan extensi domain .Contoh http://www.example.com</p>
+                    </div>
+                </div>
             </div>
-        
-       </div>
-    </form>
-    <script src="main.js"></script>
-</body>
+            </div>
+        </form>
+        </div>
+        <script src="main.js"></script>
+    </body>
 
 </html>
